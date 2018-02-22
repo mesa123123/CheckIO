@@ -4,7 +4,6 @@ def checkio(game_result):
     for i in range(0,3):
         column = ''.join([x[i] for x in game_result])
         vert_game_result.append(column)
-    #for some reason the last index of the last list of an array doesn't want to go
 
     #adds strings that represent the diagonal columns
     vert_game_result.append(''.join([x[i] for i in range(0,3) for x in game_result if  game_result.index(x) == i]))
@@ -13,7 +12,6 @@ def checkio(game_result):
     #for i in range(0,2) for x in game_result
     #adds the strings representing veritcal and diagonal squares to the game results
     game_result[3:3] = vert_game_result
-    print(game_result)
 
     #if any of the strings in the array come out as the same and is not representing three empty tiles return that character
     winner = [x for x in game_result if x == len(x) * x[0] and x[0] != "."]
